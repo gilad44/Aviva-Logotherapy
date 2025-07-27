@@ -77,8 +77,8 @@ const Home = () => {
               alignItems: "flex-start",
               textAlign: { xs: "center", md: "left" },
               maxWidth: { xs: "100%", md: "50%" },
-              mt: 4,
-              gap: 2
+              mt: 2,
+              gap: 0.5
 
             }}
           >
@@ -102,7 +102,7 @@ const Home = () => {
                 color: "#093241",
                 fontFamily: "cairo",
                 mb: 4,
-                fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.1rem" },
+                fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.2rem" },
                 lineHeight: 1.6,
               }}
             >
@@ -113,9 +113,7 @@ const Home = () => {
             <Box
               sx={{
                 display: "flex",
-                flexDirection: { xs: "column", sm: "row" },
-                gap: 2,
-                mt: 2,
+                flexDirection: "column",
               }}
             >
               <Button
@@ -137,26 +135,6 @@ const Home = () => {
               >
                 Explore Services
               </Button>
-              <Button
-                variant="outlined"
-                size="large"
-                onClick={() => navigate("/about")}
-                sx={{
-                  borderColor: "#093241",
-                  color: "#093241",
-                  fontFamily: "andika",
-                  fontWeight: "600",
-                  fontSize: { xs: "1rem", sm: "1.1rem" },
-                  py: 1.5,
-                  px: 4,
-                  "&:hover": {
-                    borderColor: "#1a4a5a",
-                    backgroundColor: "rgba(9, 50, 65, 0.04)",
-                  },
-                }}
-              >
-                Learn About Me
-              </Button>
             </Box>
           </Box>
 
@@ -168,13 +146,14 @@ const Home = () => {
               alignItems: "center",
               justifyContent: "center",
               maxWidth: { xs: "100%", md: "40%" },
-              mt: 4,
+              mt: -1,
+              mr: 8
             }}
           >
             <Box
               sx={{
-                width: { md: "300px", lg: "350px" },
-                height: { md: "300px", lg: "350px" },
+                width: { md: "200px", lg: "250px" },
+                height: { md: "200px", lg: "250px" },
                 borderRadius: "50%",
                 overflow: "hidden",
                 border: "4px solid #093241",
@@ -197,7 +176,7 @@ const Home = () => {
                 color: "#093241",
                 fontFamily: "andika",
                 fontWeight: "600",
-                mt: 2,
+                mt: 1,
                 textAlign: "center",
               }}
             >
@@ -209,7 +188,8 @@ const Home = () => {
                 color: "#093241",
                 fontFamily: "cairo",
                 textAlign: "center",
-                opacity: 0.8,
+                fontSize: { xs: "1rem", sm: "1.1rem", md: "1.1rem" },
+                fontWeight: "500",
               }}
             >
               Certified Logotherapist & Life Coach
