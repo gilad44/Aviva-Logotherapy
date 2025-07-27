@@ -1,0 +1,45 @@
+Logo Therapist Website Structure
+Homepage
+• Hero section: calming background, tagline (e.g., “Meaning-Centered Therapy for a Fulfilling Life”)
+• Brief intro: what logotherapy is in 2–3 sentences
+• Call to Action (CTA): “Book a Free Consultation” or “Learn More”
+About Me
+• Therapist’s photo & name
+• Credentials, education, certifications
+• Personal philosophy & why logotherapy
+• Optional: client testimonials or quotes (can be added later)
+What is Logotherapy?
+• Explanation of the method (clear and accessible)
+• Core principles (freedom of will, will to meaning, meaning in suffering)
+• Why it's different from other therapies
+Services
+• Individual therapy
+• Online sessions
+• Workshops or group sessions (if applicable)
+• Duration & pricing (or “Contact for Pricing”)
+• CTA: “Schedule a Session” or “Get in Touch”
+FAQs
+• What to expect in a session?
+• Who is it for?
+• Is it faith-based?
+• Insurance/Payments accepted?
+Contact
+• Simple form (name, email, message)
+• Phone number (if available)
+• Email address
+• Optional: embedded map (if in-person)
+Blog / Resources (optional)
+• Articles on finding meaning, existential questions, anxiety, etc.
+• Could be static or a placeholder until blog backend is added
+Privacy Policy / Terms
+• Required for trust, especially if collecting data via contact form
+Navigation Menu
+• Logo (top left)
+• Links: Home | About | Logotherapy | Services | Blog | Contact
+• Sticky nav or floating CTA button: “Schedule a Session”
+Optional Enhancements
+• Testimonials section (carousel or grid)
+• Meaning quote rotator on homepage
+• Booking integration (Calendly, TidyCal, etc.)
+• Light/dark mode (for accessibility and calm vibe)
+• Language selector (if serving multilingual audience)

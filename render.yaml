@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: aviva-logotherapy
+    env: static
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0 
