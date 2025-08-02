@@ -222,7 +222,7 @@ const Navbar = () => {
           />
 
 
-          {navLinks.map((link, idx) => (
+          {navLinks.map((link) => (
             <Button
               key={link.to}
               onClick={(e) => {
