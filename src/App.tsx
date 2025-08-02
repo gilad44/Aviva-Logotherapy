@@ -34,7 +34,7 @@ const App = () => {
         <Route path="cbt-therapy" element={<CBTTherapy />} />
         <Route path="reiki" element={<Reiki />} />
       </Routes>
-      {/* <Footer /> */}
+
       <FloatingButtons />
       <ToastContainer position="top-right" autoClose={3000} />
     </>

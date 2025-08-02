@@ -18,20 +18,10 @@ import ListItemText from "@mui/material/ListItemText";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-// import { OrbitControls } from "@react-three/drei";
-// import { Canvas } from "@react-three/fiber";
-// import ButterflyScene from "../threeDComps/ButterflyScene";
-
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  // const [butterflyPosition, setButterflyPosition] = useState<
-  //   [number, number, number]
-  // >([0, 0, 0]); // Butterfly always at origin in 3D
-  // const [isAnimating, setIsAnimating] = useState(false);
-  // const [canvasTop, setCanvasTop] = useState<string>("-2.4rem");
-  // const [canvasLeft, setCanvasLeft] = useState<string>("-14rem");
   const [indicatorStyle, setIndicatorStyle] = useState({
     left: "0px",
     width: "60px",
@@ -69,11 +59,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Check if current path matches any dropdown item
     const isDropdownPage = articlesDropdownItems.some(item => item.to === location.pathname);
 
     if (isDropdownPage) {
-      // If on a dropdown page, show indicator under Articles
       const articlesIndex = navLinks.findIndex(link => link.hasDropdown);
       if (articlesIndex !== -1) {
         setTimeout(() => {
@@ -81,7 +69,6 @@ const Navbar = () => {
         }, 100);
       }
     } else {
-      // Otherwise, show indicator under the current page
       const currentIndex = navLinks.findIndex(
         (link) => link.to === location.pathname
       );
@@ -293,12 +280,10 @@ const Navbar = () => {
               horizontal: 'left',
             }}
             sx={{
-              // mt: 1,
               '& .MuiPaper-root': {
                 backgroundColor: 'rgba(255, 251, 238, 0.95)',
                 backdropFilter: 'blur(10px)',
                 border: '1px solid rgba(0, 0, 0, 0.1)',
-                // borderRadius: '8px',
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
               },
             }}

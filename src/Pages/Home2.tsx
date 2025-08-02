@@ -21,8 +21,6 @@ const Home = () => {
         <Box
           sx={{
             position: "absolute",
-            // top: 0,
-            // left: 0,
             width: "100%",
             height: "100%",
             "&::before": {
@@ -127,7 +125,6 @@ const Home = () => {
                   px: 4,
                   "&:hover": {
                     backgroundColor: "rgba(185, 213, 217, 1)",
-                    // color: "whitesmoke",
                   },
                 }}
               >
@@ -174,7 +171,7 @@ const Home = () => {
                 fontSize: "1.35rem",
                 color: "black",
                 fontFamily: "libre baskerville",
-                // fontWeight: "700",
+
                 mt: 1,
                 textAlign: "center",
               }}

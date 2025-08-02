@@ -9,21 +9,21 @@ const Services = () => {
     {
       title: "Individual Therapy",
       description: "One-on-one sessions tailored to your unique needs and challenges. We'll work together to find meaning and purpose in your life journey.",
-      duration: "50-60 minutes",
+      duration: "50 minutes",
       pricing: "Contact for Pricing",
       features: ["Personalized approach", "Meaning-centered therapy", "Holistic healing", "Flexible scheduling"]
     },
     {
       title: "Online Sessions",
       description: "Convenient virtual therapy sessions from the comfort of your home. Same quality care, accessible anywhere.",
-      duration: "50-60 minutes",
+      duration: "50 minutes",
       pricing: "Contact for Pricing",
       features: ["Secure video platform", "No travel time", "Same therapeutic benefits", "Flexible scheduling"]
     },
     {
       title: "Workshops & Group Sessions",
       description: "Join others on the journey to finding meaning. Group sessions provide community support and shared learning experiences.",
-      duration: "90-120 minutes",
+      duration: "90 minutes",
       pricing: "Contact for Pricing",
       features: ["Community support", "Shared learning", "Group dynamics", "Cost-effective"]
     }
@@ -46,11 +46,12 @@ const Services = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: "url('images/home banner/noHorizon-ocean.jpg')",
+            backgroundImage: "url('images/home banner/orange-horizon-sea.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             zIndex: -2,
+            // filter: "blur(3px)",
           },
           "&::after": {
             content: '""',
@@ -59,7 +60,7 @@ const Services = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            background: "rgba(255, 255, 255, 0.5)",
+            background: "rgba(255, 255, 255, 0.7)",
             zIndex: -1,
           },
         }}
@@ -138,7 +139,7 @@ const Services = () => {
                         fontFamily: "libre baskerville",
                         fontWeight: "600",
                         mb: 2,
-                        fontSize: { xs: "1.5rem", md: "1.8rem", lg: "2rem", xl: "1.5rem" }
+                        fontSize: { xs: "1.5rem", md: "1.8rem", lg: "1.5rem", xl: "1.5rem" }
                       }}
                     >
                       {service.title}
