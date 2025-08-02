@@ -82,7 +82,7 @@ const Contact = () => {
                         sx={{
                             textAlign: "center",
                             color: "#093241",
-                            fontFamily: "andika",
+                            fontFamily: "libre baskerville",
                             fontWeight: "600",
                             mb: 2,
                             fontSize: { xs: "2rem", md: "3rem" }
@@ -96,7 +96,7 @@ const Contact = () => {
                         sx={{
                             textAlign: "center",
                             color: "#093241",
-                            fontFamily: "cairo",
+                            fontFamily: "lora",
                             mb: 6,
                             fontSize: { xs: "1.1rem", md: "1.3rem" },
                             opacity: 0.8,
@@ -129,7 +129,7 @@ const Contact = () => {
                                 variant="h4"
                                 sx={{
                                     color: "#093241",
-                                    fontFamily: "andika",
+                                    fontFamily: "libre baskerville",
                                     fontWeight: "600",
                                     mb: 3,
                                 }}
@@ -176,7 +176,7 @@ const Contact = () => {
                                     sx={{
                                         backgroundColor: "#093241",
                                         color: "white",
-                                        fontFamily: "andika",
+                                        fontFamily: "libre baskerville",
                                         fontWeight: "600",
                                         py: 1.5,
                                         px: 4,
@@ -190,7 +190,7 @@ const Contact = () => {
                             </Box>
                         </Paper>
 
-                        <Box
+                        {/* <Box
                             sx={{
                                 flex: 1,
                                 display: "flex",
@@ -211,7 +211,7 @@ const Contact = () => {
                                     variant="h5"
                                     sx={{
                                         color: "#093241",
-                                        fontFamily: "andika",
+                                        fontFamily: "libre baskerville",
                                         fontWeight: "600",
                                         mb: 3,
                                     }}
@@ -224,7 +224,7 @@ const Contact = () => {
                                         variant="body1"
                                         sx={{
                                             color: "#093241",
-                                            fontFamily: "cairo",
+                                            fontFamily: "lora",
                                             fontSize: "1.1rem",
                                         }}
                                     >
@@ -234,21 +234,21 @@ const Contact = () => {
                                         variant="body1"
                                         sx={{
                                             color: "#093241",
-                                            fontFamily: "cairo",
+                                            fontFamily: "lora",
                                             fontSize: "1.1rem",
                                         }}
                                     >
-                                        📱 Phone: +1 (555) 123-4567
+                                        📱 Phone: 054-441-2966 - whatsapp only
                                     </Typography>
                                     <Typography
                                         variant="body1"
                                         sx={{
                                             color: "#093241",
-                                            fontFamily: "cairo",
+                                            fontFamily: "lora",
                                             fontSize: "1.1rem",
                                         }}
                                     >
-                                        🕒 Available: Mon-Fri 9AM-6PM
+                                        🕒 Available: 24/7
                                     </Typography>
                                 </Box>
                             </Paper>
@@ -266,7 +266,7 @@ const Contact = () => {
                                     variant="h5"
                                     sx={{
                                         color: "#093241",
-                                        fontFamily: "andika",
+                                        fontFamily: "libre baskerville",
                                         fontWeight: "600",
                                         mb: 3,
                                     }}
@@ -278,7 +278,7 @@ const Contact = () => {
                                     variant="body1"
                                     sx={{
                                         color: "#093241",
-                                        fontFamily: "cairo",
+                                        fontFamily: "lora",
                                         lineHeight: 1.6,
                                     }}
                                 >
@@ -288,7 +288,7 @@ const Contact = () => {
                                     safe, supportive environment.
                                 </Typography>
                             </Paper>
-                        </Box>
+                        </Box> */}
                     </Box>
                 </Container>
             </Box>

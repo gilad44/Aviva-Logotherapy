@@ -1,8 +1,8 @@
-import { Box, Typography, Container, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Box, Button, Container, Typography } from "@mui/material";
 import { Helmet } from "react-helmet";
-import ArticleCard from "../comps/ArticleCard";
+import { useNavigate } from "react-router-dom";
 import type { Article } from "../comps/ArticleCard";
+import ArticleCard from "../comps/ArticleCard";
 
 const Articles = () => {
   const navigate = useNavigate();
@@ -10,53 +10,62 @@ const Articles = () => {
   const articles: Article[] = [
     {
       title: "Finding Meaning in Everyday Life",
-      excerpt: "Discover how to find purpose and meaning in the ordinary moments of your daily routine, transforming mundane tasks into opportunities for growth and fulfillment.",
+      excerpt:
+        "Discover how to find purpose and meaning in the ordinary moments of your daily routine, transforming mundane tasks into opportunities for growth and fulfillment.",
       category: "Meaning & Purpose",
       readTime: "5 min read",
-      date: "December 2024"
+      date: "December 2024",
     },
     {
       title: "The Art of Choosing Your Attitude",
-      excerpt: "Explore Viktor Frankl's powerful concept that we always have the freedom to choose our response to any situation, even in the most difficult circumstances.",
+      excerpt:
+        "Explore Viktor Frankl's powerful concept that we always have the freedom to choose our response to any situation, even in the most difficult circumstances.",
       category: "Personal Growth",
       readTime: "7 min read",
-      date: "November 2024"
+      date: "November 2024",
     },
     {
       title: "Coping with Existential Anxiety",
-      excerpt: "Learn practical strategies for managing the anxiety that comes from questioning life's meaning and purpose, and how to transform it into motivation.",
+      excerpt:
+        "Learn practical strategies for managing the anxiety that comes from questioning life's meaning and purpose, and how to transform it into motivation.",
       category: "Anxiety & Stress",
       readTime: "6 min read",
-      date: "November 2024"
+      date: "November 2024",
     },
     {
       title: "Finding Meaning in Suffering",
-      excerpt: "How to discover purpose and growth even in the most challenging times, using suffering as a catalyst for personal transformation and deeper understanding.",
+      excerpt:
+        "How to discover purpose and growth even in the most challenging times, using suffering as a catalyst for personal transformation and deeper understanding.",
       category: "Resilience",
       readTime: "8 min read",
-      date: "October 2024"
+      date: "October 2024",
     },
     {
       title: "The Three Paths to Meaning",
-      excerpt: "Explore the three fundamental ways we can find meaning in life: through creative work, through experiences and relationships, and through our attitude toward suffering.",
+      excerpt:
+        "Explore the three fundamental ways we can find meaning in life: through creative work, through experiences and relationships, and through our attitude toward suffering.",
       category: "Meaning & Purpose",
       readTime: "6 min read",
-      date: "October 2024"
+      date: "October 2024",
     },
     {
       title: "Building Authentic Relationships",
-      excerpt: "How meaningful connections with others can become a powerful source of purpose and fulfillment in our lives.",
+      excerpt:
+        "How meaningful connections with others can become a powerful source of purpose and fulfillment in our lives.",
       category: "Relationships",
       readTime: "5 min read",
-      date: "September 2024"
-    }
+      date: "September 2024",
+    },
   ];
 
   return (
     <>
       <Helmet>
         <title>Resources & Articles - Aviva Logotherapy</title>
-        <meta name="description" content="Insights and guidance on finding meaning, overcoming challenges, and living a more fulfilling life through logotherapy." />
+        <meta
+          name="description"
+          content="Insights and guidance on finding meaning, overcoming challenges, and living a more fulfilling life through logotherapy."
+        />
       </Helmet>
       <Box
         sx={{
@@ -98,7 +107,7 @@ const Articles = () => {
               fontFamily: "andika",
               fontWeight: "600",
               mb: 2,
-              fontSize: { xs: "2rem", md: "3rem" }
+              fontSize: { xs: "2rem", md: "3rem" },
             }}
           >
             Resources & Articles
@@ -113,21 +122,27 @@ const Articles = () => {
               mb: 6,
               maxWidth: "800px",
               mx: "auto",
-              fontSize: { xs: "1.1rem", md: "1.3rem" }
+              fontSize: { xs: "1.1rem", md: "1.3rem" },
             }}
           >
-            Insights and guidance on finding meaning, overcoming challenges, and living a more fulfilling life
+            Insights and guidance on finding meaning, overcoming challenges, and
+            living a more fulfilling life
           </Typography>
 
-          <Box sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 4
-          }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 4,
+            }}
+          >
             {articles.map((article, index) => (
-              <Box key={index} sx={{
-                width: { xs: "40%", md: "100%", lg: "100%" },
-              }}>
+              <Box
+                key={index}
+                sx={{
+                  width: { xs: "40%", md: "100%", lg: "100%" },
+                }}
+              >
                 <ArticleCard article={article} />
               </Box>
             ))}
@@ -140,7 +155,7 @@ const Articles = () => {
                 color: "#093241",
                 fontFamily: "andika",
                 fontWeight: "600",
-                mb: 3
+                mb: 3,
               }}
             >
               Want More Insights?
@@ -153,11 +168,12 @@ const Articles = () => {
                 mb: 4,
                 maxWidth: "600px",
                 mx: "auto",
-                lineHeight: 1.6
+                lineHeight: 1.6,
               }}
             >
-              These articles are just the beginning. In our sessions, we can explore these topics
-              more deeply and apply them to your unique situation and life circumstances.
+              These articles are just the beginning. In our sessions, we can
+              explore these topics more deeply and apply them to your unique
+              situation and life circumstances.
             </Typography>
             <Button
               variant="contained"
@@ -173,7 +189,8 @@ const Articles = () => {
                 borderRadius: 3,
                 fontSize: "1.1rem",
                 "&:hover": {
-                  background: "linear-gradient(45deg, #1a4a5a 30%, #093241 90%)",
+                  background:
+                    "linear-gradient(45deg, #1a4a5a 30%, #093241 90%)",
                 },
               }}
             >

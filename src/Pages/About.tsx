@@ -10,41 +10,44 @@ const About = () => {
       <Box
         sx={{
           minHeight: "100vh",
+          px: "3rem",
           pt: "10rem",
           pb: "3rem",
           "&::before": {
             content: '""',
             position: "fixed",
-            top: 0,
+            bottom: -200,
+            right: -400,
             left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundImage: "url('images/home banner/orange-horizon-sea.jpg')",
+            top: 0,
+            backgroundImage: "url('images/home banner/tree-over-ocean.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             zIndex: -2,
+            filter: "blur(3px)",
+            transform: "scaleX(-1)",
           },
           "&::after": {
             content: '""',
             position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
             bottom: 0,
-            background: "rgba(255, 255, 255, 0.5)",
+            right: 0,
+            left: -100,
+            top: -400,
+            backgroundColor: "rgba(250, 250, 250, 0.3)",
             zIndex: -1,
           },
         }}
       >
-        <Container maxWidth="lg">
+        <Box width="100%" height="100%">
           <Typography
             variant="h2"
             component="h1"
             sx={{
               textAlign: "center",
-              color: "#093241",
-              fontFamily: "andika",
+              color: "black",
+              fontFamily: "libre baskerville",
               fontWeight: "600",
               mb: 2,
               fontSize: { xs: "2rem", md: "3rem" }
@@ -57,14 +60,15 @@ const About = () => {
             variant="h5"
             sx={{
               textAlign: "center",
-              color: "#093241",
-              fontFamily: "cairo",
+              color: "black",
+              fontFamily: "lora",
+              fontWeight: "500",
               mb: 6,
               fontSize: { xs: "1.1rem", md: "1.3rem" },
-              opacity: 0.8,
             }}
           >
-            Your journey toward meaning and purpose starts here
+            'Our greatest freedom is the freedom to choose our attitude'&nbsp;&nbsp; <span style={{ fontFamily: "lora", fontSize: "0.8rem", fontWeight: "600" }}>(Viktor Frankl)</span>
+
           </Typography>
 
           <Box
@@ -84,8 +88,8 @@ const About = () => {
               <Typography
                 variant="h4"
                 sx={{
-                  color: "#093241",
-                  fontFamily: "andika",
+                  color: "black",
+                  fontFamily: "libre baskerville",
                   fontWeight: "600",
                   mb: 3,
                 }}
@@ -96,9 +100,10 @@ const About = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#093241",
-                  fontFamily: "cairo",
-                  fontSize: "1.1rem",
+                  color: "black",
+                  fontFamily: "lora",
+                  fontWeight: "600",
+                  fontSize: "1.2rem",
                   lineHeight: 1.8,
                   mb: 3,
                 }}
@@ -112,9 +117,10 @@ const About = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#093241",
-                  fontFamily: "cairo",
-                  fontSize: "1.1rem",
+                  color: "black",
+                  fontFamily: "lora",
+                  fontWeight: "500",
+                  fontSize: "1.2rem",
                   lineHeight: 1.8,
                   mb: 3,
                 }}
@@ -128,9 +134,10 @@ const About = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "#093241",
-                  fontFamily: "cairo",
-                  fontSize: "1.1rem",
+                  color: "black",
+                  fontFamily: "lora",
+                  fontWeight: "500",
+                  fontSize: "1.2rem",
                   lineHeight: 1.8,
                 }}
               >
@@ -154,7 +161,7 @@ const About = () => {
                   height: { xs: "250px", sm: "300px", lg: "350px" },
                   borderRadius: "50%",
                   overflow: "hidden",
-                  border: "4px solid #093241",
+                  border: "4px solid black",
                   boxShadow: "0 8px 32px rgba(9, 50, 65, 0.3)",
                 }}
               >
@@ -170,7 +177,7 @@ const About = () => {
               </Box>
             </Box>
           </Box>
-        </Container>
+        </Box>
       </Box>
     </>
   );

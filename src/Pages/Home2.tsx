@@ -1,6 +1,6 @@
-import { Box, Typography, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Box, Button, Typography } from "@mui/material";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -14,43 +14,31 @@ const Home = () => {
         sx={{
           position: "relative",
           width: "100%",
-          minHeight: "100vh",
+          minHeight: "100%",
           overflow: "hidden",
         }}
       >
         <Box
           sx={{
             position: "absolute",
-            top: 0,
-            left: 0,
+            // top: 0,
+            // left: 0,
             width: "100%",
             height: "100%",
             "&::before": {
               content: '""',
               position: "fixed",
               top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage:
-                "url('images/home banner/blue-horizon-ocean.jpg')",
+              left: { xl: -150, lg: 0 },
+              right: { xl: 0, lg: -150 },
+              bottom: { xl: -200, lg: -300 },
+              backgroundImage: "url('/images/home banner/cliff-tree.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              filter: "blur(2px)",
+              filter: "blur(3px)",
               zIndex: -1,
-            }
-          }}
-        />
-        <Box
-          sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            background: "rgba(203, 227, 205, 0.43)",
-            zIndex: 1,
+            },
           }}
         />
 
@@ -78,32 +66,41 @@ const Home = () => {
               textAlign: { xs: "center", md: "left" },
               maxWidth: { xs: "100%", md: "50%" },
               mt: 2,
-              gap: 0.5
-
+              gap: 0.5,
             }}
           >
             <Typography
               variant="h1"
               sx={{
-                color: "#093241",
-                fontFamily: "andika",
-                fontWeight: "700",
-                fontSize: { xs: "2.5rem", sm: "3.5rem", md: "2rem" },
-                mb: 3,
-                lineHeight: 1.2,
+                color: "black",
+                fontFamily: "libre baskerville",
+                fontSize: { xs: "2.5rem", sm: "3.5rem", md: "2rem", lg: "1.8rem", xl: "2.25rem" },
+                mb: 2,
+                mt: -3,
+                lineHeight: 1.5,
               }}
             >
-              Meaning-Centered Therapy for a Fulfilling Life
+              Meaning-Centered Therapy <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for
+              a Fulfilling Life
             </Typography>
 
             <Typography
               variant="h5"
               sx={{
-                color: "#093241",
-                fontFamily: "cairo",
+                color: "black",
+                fontFamily: "lora",
+                fontWeight: "500",
                 mb: 4,
-                fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.2rem" },
+                fontSize: {
+                  xs: "1.2rem",
+                  sm: "1.5rem",
+                  md: "1.2rem",
+                  lg: "1.3rem",
+                  xl: "1.35rem",
+                },
                 lineHeight: 1.6,
+                WebkitTextStroke: "0.04px rgba(255, 255, 255, 0.7)",
               }}
             >
               Discover your purpose and find meaning in every moment through
@@ -121,15 +118,16 @@ const Home = () => {
                 size="large"
                 onClick={() => navigate("/services")}
                 sx={{
-                  backgroundColor: "#093241",
-                  color: "white",
-                  fontFamily: "andika",
+                  backgroundColor: "white",
+                  color: "black",
+                  fontFamily: "lora",
                   fontWeight: "600",
-                  fontSize: { xs: "1rem", sm: "1.1rem" },
+                  fontSize: { xs: "1rem", sm: "1.1rem", lg: "1rem" },
                   py: 1.5,
                   px: 4,
                   "&:hover": {
-                    backgroundColor: "#1a4a5a",
+                    backgroundColor: "rgba(185, 213, 217, 1)",
+                    // color: "whitesmoke",
                   },
                 }}
               >
@@ -147,7 +145,7 @@ const Home = () => {
               justifyContent: "center",
               maxWidth: { xs: "100%", md: "40%" },
               mt: -1,
-              mr: 8
+              mr: 8,
             }}
           >
             <Box
@@ -156,7 +154,7 @@ const Home = () => {
                 height: { md: "200px", lg: "250px" },
                 borderRadius: "50%",
                 overflow: "hidden",
-                border: "4px solid #093241",
+                border: "3px solid #093241",
                 boxShadow: "0 8px 32px rgba(9, 50, 65, 0.3)",
               }}
             >
@@ -173,9 +171,10 @@ const Home = () => {
             <Typography
               variant="h6"
               sx={{
-                color: "#093241",
-                fontFamily: "andika",
-                fontWeight: "600",
+                fontSize: "1.35rem",
+                color: "black",
+                fontFamily: "libre baskerville",
+                // fontWeight: "700",
                 mt: 1,
                 textAlign: "center",
               }}
@@ -185,10 +184,15 @@ const Home = () => {
             <Typography
               variant="body2"
               sx={{
-                color: "#093241",
-                fontFamily: "cairo",
+                color: "black",
+                fontFamily: "lora",
                 textAlign: "center",
-                fontSize: { xs: "1rem", sm: "1.1rem", md: "1.1rem" },
+                fontSize: {
+                  xs: "1rem",
+                  sm: "1.1rem",
+                  md: "1.1rem",
+                  lg: "1rem",
+                },
                 fontWeight: "500",
               }}
             >

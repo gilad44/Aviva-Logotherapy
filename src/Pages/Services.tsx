@@ -71,7 +71,7 @@ const Services = () => {
             sx={{
               textAlign: "center",
               color: "#093241",
-              fontFamily: "andika",
+              fontFamily: "libre baskerville",
               fontWeight: "600",
               mb: 4,
               fontSize: { xs: "2rem", md: "3rem" }
@@ -85,7 +85,7 @@ const Services = () => {
             sx={{
               textAlign: "center",
               color: "#093241",
-              fontFamily: "cairo",
+              fontFamily: "lora",
               mb: 6,
               maxWidth: "800px",
               mx: "auto",
@@ -135,10 +135,10 @@ const Services = () => {
                       component="h3"
                       sx={{
                         color: "#093241",
-                        fontFamily: "andika",
+                        fontFamily: "libre baskerville",
                         fontWeight: "600",
                         mb: 2,
-                        fontSize: { xs: "1.5rem", md: "1.8rem" }
+                        fontSize: { xs: "1.5rem", md: "1.8rem", lg: "2rem", xl: "1.5rem" }
                       }}
                     >
                       {service.title}
@@ -148,7 +148,7 @@ const Services = () => {
                       variant="body1"
                       sx={{
                         color: "#093241",
-                        fontFamily: "cairo",
+                        fontFamily: "lora",
                         mb: 3,
                         lineHeight: 1.6
                       }}
@@ -161,7 +161,7 @@ const Services = () => {
                         variant="h6"
                         sx={{
                           color: "#093241",
-                          fontFamily: "andika",
+                          fontFamily: "libre baskerville",
                           fontWeight: "600",
                           mb: 1
                         }}
@@ -172,7 +172,7 @@ const Services = () => {
                         variant="h6"
                         sx={{
                           color: "#093241",
-                          fontFamily: "andika",
+                          fontFamily: "libre baskerville",
                           fontWeight: "600"
                         }}
                       >
@@ -185,7 +185,7 @@ const Services = () => {
                         variant="h6"
                         sx={{
                           color: "#093241",
-                          fontFamily: "andika",
+                          fontFamily: "libre baskerville",
                           fontWeight: "600",
                           mb: 2
                         }}
@@ -198,7 +198,7 @@ const Services = () => {
                             <Typography
                               sx={{
                                 color: "#093241",
-                                fontFamily: "cairo",
+                                fontFamily: "lora",
                                 mb: 0.5
                               }}
                             >
@@ -217,7 +217,7 @@ const Services = () => {
                       sx={{
                         background: "linear-gradient(45deg, #093241 30%, #1a4a5a 90%)",
                         color: "white",
-                        fontFamily: "andika",
+                        fontFamily: "libre baskerville",
                         fontWeight: "600",
                         py: 1.5,
                         borderRadius: 2,
@@ -240,7 +240,7 @@ const Services = () => {
               variant="h5"
               sx={{
                 color: "#093241",
-                fontFamily: "andika",
+                fontFamily: "libre baskerville",
                 fontWeight: "600",
                 mb: 3
               }}
@@ -254,7 +254,7 @@ const Services = () => {
               sx={{
                 background: "linear-gradient(45deg, #093241 30%, #1a4a5a 90%)",
                 color: "white",
-                fontFamily: "andika",
+                fontFamily: "libre baskerville",
                 fontWeight: "600",
                 px: 4,
                 py: 2,
