@@ -1,8 +1,5 @@
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box, Button, Typography } from "@mui/material";
 import { Helmet } from "react-helmet";
-import { RiArrowDownWideLine } from "react-icons/ri";
-import { SlArrowDown } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
 import Testimonials from "./Testimonials";
 
@@ -56,7 +53,6 @@ const Home = () => {
             px: 3,
             gap: 4,
             pt: { xs: "8rem", md: "10rem" },
-           
           }}
         >
           {/* Left Content */}

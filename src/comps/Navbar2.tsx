@@ -76,7 +76,7 @@ const Navbar = () => {
         }, 100);
       }
     }
-  }, [location.pathname, articlesDropdownItems, navLinks]);
+  }, [location.pathname, articlesDropdownItems]);
 
   const updateIndicatorPosition = (index: number) => {
     if (navRef.current) {
