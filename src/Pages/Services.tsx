@@ -1,6 +1,13 @@
-import { Box, Typography, Card, CardContent, Button, Container } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Container,
+  Typography,
+} from "@mui/material";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -8,25 +15,43 @@ const Services = () => {
   const services = [
     {
       title: "Individual Therapy",
-      description: "One-on-one sessions tailored to your unique needs and challenges. We'll work together to find meaning and purpose in your life journey.",
+      description:
+        "One-on-one sessions tailored to your unique needs and challenges. We'll work together to find meaning and purpose in your life journey.",
       duration: "50 minutes",
       pricing: "Contact for Pricing",
-      features: ["Personalized approach", "Meaning-centered therapy", "Holistic healing", "Flexible scheduling"]
+      features: [
+        "Personalized approach",
+        "Meaning-centered therapy",
+        "Holistic healing",
+        "Flexible scheduling",
+      ],
     },
     {
       title: "Online Sessions",
-      description: "Convenient virtual therapy sessions from the comfort of your home. Same quality care, accessible anywhere.",
+      description:
+        "Convenient virtual therapy sessions from the comfort of your home. Same quality care, accessible anywhere.",
       duration: "50 minutes",
       pricing: "Contact for Pricing",
-      features: ["Secure video platform", "No travel time", "Same therapeutic benefits", "Flexible scheduling"]
+      features: [
+        "Secure video platform",
+        "No travel time",
+        "Same therapeutic benefits",
+        "Flexible scheduling",
+      ],
     },
     {
       title: "Workshops & Group Sessions",
-      description: "Join others on the journey to finding meaning. Group sessions provide community support and shared learning experiences.",
+      description:
+        "Join others on the journey to finding meaning. Group sessions provide community support and shared learning experiences.",
       duration: "90 minutes",
       pricing: "Contact for Pricing",
-      features: ["Community support", "Shared learning", "Group dynamics", "Cost-effective"]
-    }
+      features: [
+        "Community support",
+        "Shared learning",
+        "Group dynamics",
+        "Cost-effective",
+      ],
+    },
   ];
 
   return (
@@ -40,28 +65,22 @@ const Services = () => {
           pt: "10rem",
           pb: "3rem",
           "&::before": {
+            height: "100%",
+            width: "100%",
             content: '""',
             position: "fixed",
             top: 0,
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: "url('images/home banner/orange-horizon-sea.jpg')",
+
+            backgroundImage: "url('images/home banner/tree-over-ocean.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            // transform: "scaleX(1.8)", // Shows more of the image
+            transformOrigin: "center center",
             zIndex: -2,
-            // filter: "blur(3px)",
-          },
-          "&::after": {
-            content: '""',
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: "rgba(255, 255, 255, 0.7)",
-            zIndex: -1,
           },
         }}
       >
@@ -75,7 +94,7 @@ const Services = () => {
               fontFamily: "libre baskerville",
               fontWeight: "600",
               mb: 4,
-              fontSize: { xs: "2rem", md: "3rem" }
+              fontSize: { xs: "2rem", md: "3rem" },
             }}
           >
             My Services
@@ -90,25 +109,30 @@ const Services = () => {
               mb: 6,
               maxWidth: "800px",
               mx: "auto",
-              fontSize: { xs: "1.1rem", md: "1.3rem" }
+              fontSize: { xs: "1.1rem", md: "1.3rem" },
             }}
           >
-            I offer a range of therapeutic services designed to help you find meaning,
-            overcome challenges, and live a more fulfilling life.
+            I offer a range of therapeutic services designed to help you find
+            meaning, overcome challenges, and live a more fulfilling life.
           </Typography>
 
-          <Box sx={{
-            display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            gap: 4,
-            mb: 6,
-            justifyContent: "space-between"
-          }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              gap: 4,
+              mb: 6,
+              justifyContent: "space-between",
+            }}
+          >
             {services.map((service, index) => (
-              <Box key={index} sx={{
-                width: { xs: "100%", md: "calc(33.333% - 16px)" },
-                minWidth: { xs: "100%", md: "calc(33.333% - 16px)" }
-              }}>
+              <Box
+                key={index}
+                sx={{
+                  width: { xs: "100%", md: "calc(33.333% - 16px)" },
+                  minWidth: { xs: "100%", md: "calc(33.333% - 16px)" },
+                }}
+              >
                 <Card
                   sx={{
                     height: "100%",
@@ -125,12 +149,14 @@ const Services = () => {
                     },
                   }}
                 >
-                  <CardContent sx={{
-                    p: 3,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: "100%"
-                  }}>
+                  <CardContent
+                    sx={{
+                      p: 3,
+                      display: "flex",
+                      flexDirection: "column",
+                      height: "100%",
+                    }}
+                  >
                     <Typography
                       variant="h4"
                       component="h3"
@@ -139,7 +165,12 @@ const Services = () => {
                         fontFamily: "libre baskerville",
                         fontWeight: "600",
                         mb: 2,
-                        fontSize: { xs: "1.5rem", md: "1.8rem", lg: "1.5rem", xl: "1.5rem" }
+                        fontSize: {
+                          xs: "1.5rem",
+                          md: "1.8rem",
+                          lg: "1.5rem",
+                          xl: "1.5rem",
+                        },
                       }}
                     >
                       {service.title}
@@ -151,7 +182,7 @@ const Services = () => {
                         color: "#093241",
                         fontFamily: "lora",
                         mb: 3,
-                        lineHeight: 1.6
+                        lineHeight: 1.6,
                       }}
                     >
                       {service.description}
@@ -164,7 +195,7 @@ const Services = () => {
                           color: "#093241",
                           fontFamily: "libre baskerville",
                           fontWeight: "600",
-                          mb: 1
+                          mb: 1,
                         }}
                       >
                         Duration: {service.duration}
@@ -174,7 +205,7 @@ const Services = () => {
                         sx={{
                           color: "#093241",
                           fontFamily: "libre baskerville",
-                          fontWeight: "600"
+                          fontWeight: "600",
                         }}
                       >
                         Pricing: {service.pricing}
@@ -188,7 +219,7 @@ const Services = () => {
                           color: "#093241",
                           fontFamily: "libre baskerville",
                           fontWeight: "600",
-                          mb: 2
+                          mb: 2,
                         }}
                       >
                         What's Included:
@@ -200,7 +231,7 @@ const Services = () => {
                               sx={{
                                 color: "#093241",
                                 fontFamily: "lora",
-                                mb: 0.5
+                                mb: 0.5,
                               }}
                             >
                               {feature}
@@ -216,7 +247,8 @@ const Services = () => {
                       fullWidth
                       onClick={() => navigate("/contact")}
                       sx={{
-                        background: "linear-gradient(45deg, #093241 30%, #1a4a5a 90%)",
+                        background:
+                          "linear-gradient(45deg, #093241 30%, #1a4a5a 90%)",
                         color: "white",
                         fontFamily: "libre baskerville",
                         fontWeight: "600",
@@ -224,7 +256,8 @@ const Services = () => {
                         borderRadius: 2,
                         mt: "auto",
                         "&:hover": {
-                          background: "linear-gradient(45deg, #1a4a5a 30%, #093241 90%)",
+                          background:
+                            "linear-gradient(45deg, #1a4a5a 30%, #093241 90%)",
                         },
                       }}
                     >
@@ -243,7 +276,7 @@ const Services = () => {
                 color: "#093241",
                 fontFamily: "libre baskerville",
                 fontWeight: "600",
-                mb: 3
+                mb: 3,
               }}
             >
               Ready to Start Your Journey?
@@ -262,7 +295,8 @@ const Services = () => {
                 borderRadius: 3,
                 fontSize: "1.1rem",
                 "&:hover": {
-                  background: "linear-gradient(45deg, #1a4a5a 30%, #093241 90%)",
+                  background:
+                    "linear-gradient(45deg, #1a4a5a 30%, #093241 90%)",
                 },
               }}
             >

@@ -1,62 +1,12 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import type { Article } from "../comps/ArticleCard";
 import ArticleCard from "../comps/ArticleCard";
+import type { Article } from "../data/articles";
+import { articles } from "../data/articles";
 
 const Articles = () => {
   const navigate = useNavigate();
-
-  const articles: Article[] = [
-    {
-      title: "Finding Meaning in Everyday Life",
-      excerpt:
-        "Discover how to find purpose and meaning in the ordinary moments of your daily routine, transforming mundane tasks into opportunities for growth and fulfillment.",
-      category: "Meaning & Purpose",
-      readTime: "5 min read",
-      date: "December 2024",
-    },
-    {
-      title: "The Art of Choosing Your Attitude",
-      excerpt:
-        "Explore Viktor Frankl's powerful concept that we always have the freedom to choose our response to any situation, even in the most difficult circumstances.",
-      category: "Personal Growth",
-      readTime: "7 min read",
-      date: "November 2024",
-    },
-    {
-      title: "Coping with Existential Anxiety",
-      excerpt:
-        "Learn practical strategies for managing the anxiety that comes from questioning life's meaning and purpose, and how to transform it into motivation.",
-      category: "Anxiety & Stress",
-      readTime: "6 min read",
-      date: "November 2024",
-    },
-    {
-      title: "Finding Meaning in Suffering",
-      excerpt:
-        "How to discover purpose and growth even in the most challenging times, using suffering as a catalyst for personal transformation and deeper understanding.",
-      category: "Resilience",
-      readTime: "8 min read",
-      date: "October 2024",
-    },
-    {
-      title: "The Three Paths to Meaning",
-      excerpt:
-        "Explore the three fundamental ways we can find meaning in life: through creative work, through experiences and relationships, and through our attitude toward suffering.",
-      category: "Meaning & Purpose",
-      readTime: "6 min read",
-      date: "October 2024",
-    },
-    {
-      title: "Building Authentic Relationships",
-      excerpt:
-        "How meaningful connections with others can become a powerful source of purpose and fulfillment in our lives.",
-      category: "Relationships",
-      readTime: "5 min read",
-      date: "September 2024",
-    },
-  ];
 
   return (
     <>
@@ -136,7 +86,7 @@ const Articles = () => {
               gap: 4,
             }}
           >
-            {articles.map((article, index) => (
+            {articles.map((article: Article, index: number) => (
               <Box
                 key={index}
                 sx={{

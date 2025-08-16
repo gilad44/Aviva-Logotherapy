@@ -1,23 +1,23 @@
-import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Box,
   Button,
   Drawer,
   IconButton,
-  Toolbar,
-  Typography,
   Menu,
   MenuItem,
+  Toolbar,
+  Typography,
 } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
+import { navLinks } from "../data/navLinks";
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -27,23 +27,19 @@ const Navbar = () => {
     width: "60px",
     opacity: 1,
   });
-  const [articlesAnchorEl, setArticlesAnchorEl] = useState<null | HTMLElement>(null);
+  const [articlesAnchorEl, setArticlesAnchorEl] = useState<null | HTMLElement>(
+    null
+  );
 
   const navRef = useRef<HTMLDivElement>(null);
 
-  const navLinks = [
-    { label: "Home", to: "/" },
-    { label: "About", to: "/about" },
-    { label: "Services", to: "/services" },
-    { label: "Articles", to: "/articles", hasDropdown: true },
-    { label: "FAQ", to: "/faq" },
-  ];
-
-  const articlesDropdownItems = [
-    { label: "Logotherapy", to: "/logotherapy-article" },
-    { label: "CBT Therapy", to: "/cbt-therapy" },
-    { label: "Reiki", to: "/reiki" },
-  ];
+  const articlesDropdownItems = useMemo(
+    () => [
+      { label: "Logotherapy", to: "/logotherapy-article" },
+      { label: "CBT Therapy", to: "/cbt-therapy" },
+    ],
+    []
+  );
 
   const handleArticlesClick = (event: React.MouseEvent<HTMLElement>) => {
     setArticlesAnchorEl(event.currentTarget);
@@ -59,10 +55,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const isDropdownPage = articlesDropdownItems.some(item => item.to === location.pathname);
+    const isDropdownPage = articlesDropdownItems.some(
+      (item) => item.to === location.pathname
+    );
 
     if (isDropdownPage) {
-      const articlesIndex = navLinks.findIndex(link => link.hasDropdown);
+      const articlesIndex = navLinks.findIndex((link) => link.hasDropdown);
       if (articlesIndex !== -1) {
         setTimeout(() => {
           updateIndicatorPosition(articlesIndex);
@@ -78,8 +76,7 @@ const Navbar = () => {
         }, 100);
       }
     }
-  }, [location.pathname]);
-
+  }, [location.pathname, articlesDropdownItems, navLinks]);
 
   const updateIndicatorPosition = (index: number) => {
     if (navRef.current) {
@@ -112,8 +109,9 @@ const Navbar = () => {
         left: 0,
         right: 0,
         maxWidth: "100%",
-        background: "linear-gradient(to right, #fffbee, rgba(255, 255, 255, 0.4))",
-        boxShadow: "5px 5px 2px 0 rgba(0, 0, 0, 0.3)",
+        background:
+          "radial-gradient(ellipse, rgba(255, 255, 255, 0.5) 10%,#fffbee 80% )",
+        boxShadow: "0px 5px 10px 0 rgba(0, 0, 0, 0.3)",
       }}
     >
       <Toolbar
@@ -166,12 +164,13 @@ const Navbar = () => {
                 "3xs": "6vmax",
                 sm: "4vmax",
                 md: "3vmax",
-                lg: "3vmax",
+                lg: "2.5vmax",
                 xl: "2vmax",
               }}
               fontFamily="libre baskerville"
               color="black"
               mt={1}
+              ml={-2}
               sx={{ textShadow: "0.15rem 0 3px whitesmoke" }}
             >
               Aviva Gros-Margalit
@@ -202,8 +201,8 @@ const Navbar = () => {
           sx={{
             display: { "3xs": "none", md: "flex" },
             position: "relative",
-            gap: 2,
-            width: "30rem",
+            gap: 1,
+            width: "38rem",
             height: "2rem",
             zIndex: 3,
           }}
@@ -220,7 +219,6 @@ const Navbar = () => {
               ...indicatorStyle,
             }}
           />
-
 
           {navLinks.map((link) => (
             <Button
@@ -259,7 +257,9 @@ const Navbar = () => {
                     ml: 0.5,
                     fontSize: "1rem",
                     transition: "transform 0.2s ease",
-                    transform: Boolean(articlesAnchorEl) ? "rotate(180deg)" : "rotate(0deg)",
+                    transform: articlesAnchorEl
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
                   }}
                 />
               )}
@@ -272,19 +272,19 @@ const Navbar = () => {
             open={Boolean(articlesAnchorEl)}
             onClose={handleArticlesClose}
             anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
+              vertical: "bottom",
+              horizontal: "left",
             }}
             transformOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
+              vertical: "top",
+              horizontal: "left",
             }}
             sx={{
-              '& .MuiPaper-root': {
-                backgroundColor: 'rgba(255, 251, 238, 0.95)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(0, 0, 0, 0.1)',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+              "& .MuiPaper-root": {
+                backgroundColor: "rgba(255, 251, 238, 0.95)",
+                backdropFilter: "blur(10px)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
+                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.15)",
               },
             }}
           >
@@ -293,11 +293,11 @@ const Navbar = () => {
                 key={item.to}
                 onClick={() => handleDropdownItemClick(item.to)}
                 sx={{
-                  fontFamily: 'lora',
-                  fontSize: '0.9rem',
-                  color: 'black',
-                  '&:hover': {
-                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                  fontFamily: "lora",
+                  fontSize: "0.9rem",
+                  color: "black",
+                  "&:hover": {
+                    backgroundColor: "rgba(0, 0, 0, 0.05)",
                   },
                 }}
               >
